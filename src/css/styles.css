@@ -7,8 +7,11 @@
 @import url('./reset.css');
 @import url('./common.css');
 
+@import url('./timer.css');
+@import url('./snackbar.css');
+
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
