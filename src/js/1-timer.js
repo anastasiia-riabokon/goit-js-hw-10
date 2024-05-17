@@ -6,16 +6,25 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import 'izitoast/dist/css/iziToast.css';
 
-const inputEl = document.querySelector('#datetime-picker');
-const btnStart = document.querySelector('[data-start]');
-const output = document.querySelector('.js-timer');
+const ref = {
+  inputEl: document.querySelector('#datetime-picker'),
+  btnStart: document.querySelector('[data-start]'),
+  output: document.querySelector('.js-timer'),
+};
 
-const dateDays = output.querySelector('[data-days]');
-const dateHours = output.querySelector('[data-hours]');
-const dateMinutes = output.querySelector('[data-minutes]');
-const dateSeconds = output.querySelector('[data-seconds]');
+const { inputEl, btnStart, output } = ref;
+
 let userSelectedDate;
 let id;
+
+function selectedTimerElements() {
+  return {
+    dateDays: output.querySelector('[data-days]'),
+    dateHours: output.querySelector('[data-hours]'),
+    dateMinutes: output.querySelector('[data-minutes]'),
+    dateSeconds: output.querySelector('[data-seconds]'),
+  };
+}
 
 const options = {
   enableTime: true,
@@ -26,8 +35,8 @@ const options = {
     userSelectedDate = selectedDates[0];
   },
   onChange(selectedDates) {
-    userSelectedDate = selectedDates[0];
-    if (userSelectedDate < options.defaultDate) {
+    if (selectedDates[0] < options.defaultDate) {
+      hideErrorToast();
       iziToast.error({
         title: 'Error',
         message: 'Please choose a date in the future',
@@ -42,17 +51,30 @@ const options = {
       btnStart.disabled = true;
     } else {
       btnStart.disabled = false;
-      const toast = document.querySelectorAll('.iziToast');
-      if (toast) {
-        toast.forEach(message => iziToast.hide({}, message));
-      }
+      hideErrorToast();
     }
   },
 };
 
-const date = flatpickr(inputEl, options);
+function hideErrorToast() {
+  const toast = document.querySelectorAll('.iziToast');
+  if (toast.length >= 1) {
+    iziToast.hide({}, toast[0]);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  flatpickr(inputEl, options);
+});
 
 btnStart.addEventListener('click', startTimer);
+
+function startTimer() {
+  updTimer();
+  id = setInterval(updTimer, 1000);
+  inputEl.disabled = true;
+  btnStart.disabled = true;
+}
 
 function updTimer() {
   const currentDate = Date.now();
@@ -65,17 +87,11 @@ function updTimer() {
     return;
   }
   const { days, hours, minutes, seconds } = convertMs(diff);
-  dateDays.textContent = addLeadingZero(days);
-  dateHours.textContent = addLeadingZero(hours);
-  dateMinutes.textContent = addLeadingZero(minutes);
-  dateSeconds.textContent = addLeadingZero(seconds);
-}
-
-function startTimer() {
-  updTimer();
-  id = setInterval(updTimer, 1000);
-  inputEl.disabled = true;
-  btnStart.disabled = true;
+  const timerEl = selectedTimerElements();
+  timerEl.dateDays.textContent = addLeadingZero(days);
+  timerEl.dateHours.textContent = addLeadingZero(hours);
+  timerEl.dateMinutes.textContent = addLeadingZero(minutes);
+  timerEl.dateSeconds.textContent = addLeadingZero(seconds);
 }
 
 function addLeadingZero(value) {
