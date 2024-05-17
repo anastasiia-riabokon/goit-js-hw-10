@@ -18,6 +18,7 @@ const { inputEl, btnStart, output } = ref;
 
 let userSelectedDate;
 let id;
+btnStart.disabled = true;
 
 function selectedTimerElements() {
   return {
