@@ -32,7 +32,9 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    userSelectedDate = selectedDates[0];
+    if (selectedDates[0] > options.defaultDate) {
+      userSelectedDate = selectedDates[0];
+    }
   },
   onChange(selectedDates) {
     if (selectedDates[0] < options.defaultDate) {
@@ -60,7 +62,7 @@ const options = {
 function hideErrorToast() {
   const toast = document.querySelectorAll('.iziToast');
   if (toast.length >= 1) {
-    iziToast.hide({}, toast[0]);
+    iziToast.hide({ transitionOut: 'fadeOutUp' }, toast[0]);
   }
 }
 
