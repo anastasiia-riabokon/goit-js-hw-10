@@ -47,7 +47,7 @@ const options = {
         messageColor: '#FFF',
         displayMode: 2,
         transitionIn: 'fadeInLeft',
-        icon: 'icon',
+        icon: 'icon-error',
       });
       btnStart.disabled = true;
     } else {
