@@ -5,13 +5,10 @@ import 'izitoast/dist/css/iziToast.css';
 const ref = {
   radioFields: document.querySelectorAll('.radio-field'),
   stateFieldset: document.querySelector('fieldset'),
-  btnCreateNotification: document.querySelector('.js-btn-snackbar'),
-  inputEl: document.querySelector('.js-input'),
   form: document.querySelector('.form'),
 };
 
-const { radioFields, stateFieldset, btnCreateNotification, inputEl, form } =
-  ref;
+const { radioFields, stateFieldset, form } = ref;
 
 radioFields.forEach(radioField => {
   radioField.addEventListener('change', () => {
