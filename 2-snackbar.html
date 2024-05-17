@@ -13,7 +13,9 @@
     
     <script type="module" crossorigin src="/goit-js-hw-10/commonHelpers2.js"></script>
     <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/modulepreload-polyfill-3cfb730f.js">
-    <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-adefcb29.css">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-f20d2ef6.js">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/vendor-643de26b.css">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-c798849c.css">
   </head>
   <body>
     <section>
@@ -25,8 +27,8 @@
         <label>
           Delay (ms)
           <input
-            class="input-field delay-field"
-            type="number"
+            class="input-field delay-field js-input"
+            type="text"
             name="delay"
             required
           />
@@ -56,7 +58,9 @@
           </label>
         </fieldset>
 
-        <button class="btn-snackbar" type="submit">Create notification</button>
+        <button class="btn-snackbar js-btn-snackbar" type="submit">
+          Create notification
+        </button>
       </form>
     </section>
 
