@@ -48,11 +48,14 @@ const options = {
         theme: 'dark',
         backgroundColor: '#EF4040',
         titleColor: '#FFF',
+        titleSize: '16',
+        titleLineHeight: '24',
         messageColor: '#FFF',
+        messageSize: '16',
+        messageLineHeight: '24',
         displayMode: 2,
         transitionIn: 'fadeInLeft',
         iconUrl: iconError,
-        class: 'custom-font',
       });
       btnStart.disabled = true;
     } else {
