@@ -1,6 +1,9 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import 'izitoast/dist/css/iziToast.css';
+import iconError from '../img/icon-error.svg';
+import iconSuccess from '../img/icon-success.svg';
+import iconClose from '../img/icon-close.svg';
 
 const ref = {
   radioFields: document.querySelectorAll('.radio-field'),
@@ -37,7 +40,7 @@ function outputMessage(type, delay) {
         title: 'Error',
         message: `Rejected promise in ${delay}ms`,
         backgroundColor: '#EF4040',
-        icon: 'icon-error',
+        iconUrl: iconError,
       });
       break;
     case 'success-message':
@@ -47,7 +50,7 @@ function outputMessage(type, delay) {
 
         backgroundColor: '#59A10D',
         progressBarColor: '#B5EA7C',
-        icon: 'icon-success',
+        iconUrl: iconSuccess,
       });
       break;
     default:
@@ -55,7 +58,7 @@ function outputMessage(type, delay) {
         title: 'Error',
         message: 'Illegal operation',
         backgroundColor: '#EF4040',
-        icon: 'icon-error',
+        iconUrl: iconError,
       });
   }
 }

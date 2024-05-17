@@ -99,34 +99,6 @@ button:hover {
   border: 1px solid #4e75ff;
 }
 
-.icon-error {
-  background-image: url('../img/icon-error.svg');
-}
-
-.icon-warning {
-  background-image: url('../img/icon-warning.svg');
-}
-
-.icon-info {
-  background-image: url('../img/icon-info.svg');
-}
-
-.icon-success {
-  background-image: url('../img/icon-success.svg');
-}
-
-.icon-success-green {
-  background-image: url('../img/icon-success-green.svg');
-  background-repeat: no-repeat;
-  background-size: 24px;
-}
-
-.icon-success-green {
-  background-image: url('../img/icon-success-black.svg');
-  background-repeat: no-repeat;
-  background-size: 24px;
-}
-
 .iziToast {
   font-family: 'Montserrat', sans-serif !important;
 }
@@ -146,9 +118,4 @@ button:hover {
 .iziToast > .iziToast-close {
   background: url('../img/icon-close-white.svg') no-repeat 50% 50% !important;
   background-size: 16px !important;
-}
-
-.btn-message {
-  border-radius: 8px;
-  background: #cfcfcf;
 }
