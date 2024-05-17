@@ -102,3 +102,8 @@ button:hover {
 .iziToast > .iziToast-body .iziToast-message {
   font-family: 'Montserrat', sans-serif;
 }
+
+.iziToast > .iziToast-close {
+  background: url('../img/icon-close-white.svg') no-repeat 50% 50% !important;
+  background-size: 16px !important;
+}
