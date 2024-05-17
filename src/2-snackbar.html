@@ -16,5 +16,47 @@
     <section>
       <a href="./index.html" class="link home">&#8592; Go to home</a>
     </section>
+
+    <section class="container">
+      <form class="form">
+        <label>
+          Delay (ms)
+          <input
+            class="input-field delay-field"
+            type="number"
+            name="delay"
+            required
+          />
+        </label>
+
+        <fieldset>
+          <legend>State</legend>
+          <label>
+            <input
+              class="radio-field"
+              type="radio"
+              name="state"
+              value="fulfilled"
+              required
+            />
+            Fulfilled
+          </label>
+          <label>
+            <input
+              class="radio-field"
+              type="radio"
+              name="state"
+              value="rejected"
+              required
+            />
+            Rejected
+          </label>
+        </fieldset>
+
+        <button class="btn-snackbar" type="submit">Create notification</button>
+      </form>
+    </section>
+
+    <script type="module" src="./js/2-snackbar.js" defer></script>
   </body>
 </html>

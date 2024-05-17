@@ -36,7 +36,6 @@ const options = {
   },
   onChange(selectedDates) {
     if (selectedDates[0] < options.defaultDate) {
-      hideErrorToast();
       iziToast.error({
         title: 'Error',
         message: 'Please choose a date in the future',
@@ -46,7 +45,9 @@ const options = {
         backgroundColor: '#EF4040',
         titleColor: '#FFF',
         messageColor: '#FFF',
-        iconUrl: './img/icon-error.svg',
+        displayMode: 2,
+        transitionIn: 'fadeInLeft',
+        icon: 'icon',
       });
       btnStart.disabled = true;
     } else {

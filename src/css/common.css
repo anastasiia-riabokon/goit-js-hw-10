@@ -1,3 +1,8 @@
+.container {
+  max-width: 1440px;
+  padding: 36px 156px;
+}
+
 .link {
   padding: 8px;
 
@@ -72,4 +77,24 @@ button {
 
 button:hover {
   background-color: #6c8cff;
+}
+
+.input-field {
+  padding: 8px 16px;
+
+  border-radius: 4px;
+  border: 1px solid #808080;
+
+  color: #2e2f42;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04rem;
+}
+.input-field:hover {
+  border: 1px solid #000;
+}
+
+.input-field:focus {
+  border: 1px solid #4e75ff;
 }

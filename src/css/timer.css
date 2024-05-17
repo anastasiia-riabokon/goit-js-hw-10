@@ -1,34 +1,12 @@
-.container {
-  max-width: 1440px;
-  padding: 36px 156px;
-}
-
-.data-field {
-  width: 272px;
-  padding: 8px 16px;
-
-  border-radius: 4px;
-  border: 1px solid #808080;
-
-  color: #2e2f42;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04rem;
-}
-.data-field:hover {
-  border: 1px solid #000;
-}
-
-.data-field:focus {
-  border: 1px solid #4e75ff;
-}
-
 .btn-timer[disabled] {
   background-color: #cfcfcf;
 
   color: #989898;
   cursor: not-allowed;
+}
+
+.data-field {
+  width: 272px;
 }
 
 .data-field[disabled] {
@@ -65,4 +43,8 @@
 .label {
   color: #2e2f42;
   text-transform: uppercase;
+}
+
+.icon {
+  background-image: url('../img/icon-error.svg');
 }
