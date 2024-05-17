@@ -99,23 +99,6 @@ button:hover {
   border: 1px solid #4e75ff;
 }
 
-.iziToast {
-  font-family: 'Montserrat', sans-serif !important;
-}
-
-.iziToast.iziToast-balloon:after {
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15) !important;
-}
-
-.iziToast:after {
-  box-shadow: none !important;
-}
-
-.iziToast > .iziToast-cover {
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.iziToast > .iziToast-close {
-  background: url('../img/icon-close-white.svg') no-repeat 50% 50% !important;
-  background-size: 16px !important;
+.custom-font {
+  font-family: 'Montserrat', sans-serif;
 }

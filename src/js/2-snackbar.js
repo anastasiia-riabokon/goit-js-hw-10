@@ -32,6 +32,7 @@ function outputMessage(type, delay) {
     titleColor: '#FFF',
     messageColor: '#FFF',
     position: 'topRight',
+    class: 'custom-font',
   });
 
   switch (type) {

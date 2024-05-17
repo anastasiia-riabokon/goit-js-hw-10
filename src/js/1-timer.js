@@ -6,6 +6,8 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import 'izitoast/dist/css/iziToast.css';
 
+import iconError from '../img/icon-error.svg';
+
 const ref = {
   inputEl: document.querySelector('#datetime-picker'),
   btnStart: document.querySelector('[data-start]'),
@@ -49,7 +51,8 @@ const options = {
         messageColor: '#FFF',
         displayMode: 2,
         transitionIn: 'fadeInLeft',
-        icon: 'icon-error',
+        iconUrl: iconError,
+        class: 'custom-font',
       });
       btnStart.disabled = true;
     } else {
