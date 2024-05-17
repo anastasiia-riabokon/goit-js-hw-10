@@ -42,7 +42,7 @@ function outputMessage(type, delay) {
         message: `Rejected promise in ${delay}ms`,
         backgroundColor: '#EF4040',
         iconUrl: iconError,
-        timeout: 1000000000,
+        timeout: 5000,
         closeOnEscape: true,
         transitionIn: 'fadeInLeft',
         transitionOut: 'fadeOutUp',
@@ -53,7 +53,6 @@ function outputMessage(type, delay) {
         titleColor: '#FFF',
         messageColor: '#FFF',
         position: 'topRight',
-        class: 'custom-font',
       });
       break;
     case 'success-message':
@@ -75,7 +74,6 @@ function outputMessage(type, delay) {
         titleColor: '#FFF',
         messageColor: '#FFF',
         position: 'topRight',
-        class: 'custom-font',
       });
       break;
     default:
