@@ -42,7 +42,7 @@ function outputMessage(type, delay) {
         message: `Rejected promise in ${delay}ms`,
         backgroundColor: '#EF4040',
         iconUrl: iconError,
-        timeout: 5000,
+        timeout: 1000000000,
         closeOnEscape: true,
         transitionIn: 'fadeInLeft',
         transitionOut: 'fadeOutUp',
