@@ -37,7 +37,7 @@ const options = {
         backgroundColor: '#EF4040',
         titleColor: '#FFF',
         messageColor: '#FFF',
-        iconUrl: '/icon-error.svg',
+        iconUrl: '../img/icon-error.svg',
       });
       btnStart.disabled = true;
     } else {
